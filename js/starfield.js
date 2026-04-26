@@ -56,7 +56,7 @@ function createStarfield(scene) {
     colors[i * 3 + 2] = cb;
 
     // Size: most small, few larger
-    const sz = 0.3 + Math.random() * 2.2 * Math.random();
+    const sz = 1.6 + Math.random() * 10.0 * Math.random();
     sizes[i] = sz;
     baseSizes[i] = sz;
     twinklePhases[i] = Math.random() * Math.PI * 2.0;
@@ -88,14 +88,14 @@ function createStarfield(scene) {
 
   // --- Material ---
   const mat = new THREE.PointsMaterial({
-    size: 1.6,
+    size: 3.5,
     map: spriteTex,
     vertexColors: true,
     blending: THREE.AdditiveBlending,
     depthWrite: false,
     depthTest: true,
     transparent: true,
-    opacity: 0.9
+    opacity: 1.0
   });
 
   const points = new THREE.Points(geom, mat);

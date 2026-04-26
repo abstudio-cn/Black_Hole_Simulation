@@ -7,7 +7,7 @@
  */
 
 function createCosmicBackground(scene) {
-  const radius = 800.0;
+  const radius = 80.0;
 
   // =====================
   // Procedural cosmic texture (canvas)
@@ -21,7 +21,7 @@ function createCosmicBackground(scene) {
   ctx.fillStyle = '#000000';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  // --- Faint distant stars sprinkled on the texture ---
+  // --- Bright distant stars sprinkled on the texture ---
   for (let s = 0; s < 800; s++) {
     const sx = Math.random() * canvas.width;
     const sy = Math.random() * canvas.height;
